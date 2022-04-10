@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1>Kullanıcılar</h1>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        function myfunction() {
+            $.ajax({
+                type: "GET",
+                url: "https://localhost:44366/api/user",
+                dataType: 'json',
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    debugger;
+
+                },
+                error: function (request, status, error) {
+
+                }
+            });
+        }
+
+        myfunction();
+    </script>
+
+</body>
+</html>
